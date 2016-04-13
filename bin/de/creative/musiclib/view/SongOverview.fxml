@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.SongOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="127.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="songTable" layoutX="-13.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <columns>
+                      <TableColumn fx:id="songNameColumn" prefWidth="195.9627571105957" resizable="false" text="Song" />
+                      <TableColumn fx:id="tonartColumn" minWidth="0.0" prefWidth="70.23208618164062" resizable="false" text="Tonart" />
+                        <TableColumn fx:id="singerColumn" prefWidth="88.34661865234375" resizable="false" text="Sänger" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="356.0" styleClass="background">
+               <children>
+                  <Label layoutX="43.0" layoutY="33.0" prefHeight="36.0" prefWidth="226.0" styleClass="label-header" text="Details" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="147.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+                  <GridPane layoutX="11.0" layoutY="69.0" prefHeight="180.0" prefWidth="396.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.61602783203125" minWidth="10.0" prefWidth="170.5555419921875" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="725.0977783203125" minWidth="10.0" prefWidth="716.4444580078125" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="authorLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Band" GridPane.rowIndex="1" />
+                        <Label text="Veröffentlichung" GridPane.rowIndex="2" />
+                        <Label fx:id="yearLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Tonart" GridPane.rowIndex="3" />
+                        <Label fx:id="tonartLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Songname" />
+                        <Label fx:id="songNameLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label text="Sänger" GridPane.rowIndex="5" />
+                        <Label fx:id="singerLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Intro" GridPane.rowIndex="6" />
+                        <Label fx:id="introLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Vers" GridPane.rowIndex="7" />
+                        <Label fx:id="verseLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label text="Pre-Chorus" GridPane.rowIndex="8" />
+                        <Label text="Chorus" GridPane.rowIndex="9" />
+                        <Label text="Bridge" GridPane.rowIndex="10" />
+                        <Label fx:id="preChorusLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label fx:id="chorusLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <Label fx:id="bridgeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <Label text="Kapo" GridPane.rowIndex="4" />
+                        <Label fx:id="kappoLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <HBox layoutX="239.0" layoutY="258.0" spacing="7.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <children>
+                        <Button layoutX="136.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleNewPerson" text="New" />
+                        <Button layoutX="208.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleEditPerson" text="Edit" />
+                        <Button layoutX="278.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleDeletePerson" text="Delete" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="810.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Datei">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleNew" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaveAs" text="Save As" />
+              <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Gig-Listen">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleShowGigList" text="Erstellen" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowBlockOverView" text="Block-Editor öffnen" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowSongOverView" text="Song-Übersicht" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Statistiken">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleShowSingerStatistics" text="Sänger Verteilung" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowSongAnalysis" text="Song Analyse" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Hilfe">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

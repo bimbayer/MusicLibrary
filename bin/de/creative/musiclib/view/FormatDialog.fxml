@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="160.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.FormatDialogController">
+   <children>
+      <Label layoutX="95.0" layoutY="14.0" prefHeight="26.0" prefWidth="261.0" text="Wählen sie das Format für die Gig-Liste" AnchorPane.topAnchor="14.0" />
+      <HBox layoutX="303.0" layoutY="117.0" spacing="15.0">
+         <children>
+            <Button layoutX="258.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleOk" text="Ok" />
+            <Button layoutX="334.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleCancel" text="Abbrechen" />
+         </children>
+      </HBox>
+      <RadioButton fx:id="standardRadioButton" layoutX="36.0" layoutY="51.0" mnemonicParsing="false" selected="true" text="Standard (30 Songs - 1 Pause)" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="208.0" AnchorPane.topAnchor="51.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="selection" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="emptyRadioButton" layoutX="36.0" layoutY="75.0" mnemonicParsing="false" text="Leere Liste (0 Songs - 0 Pausen)" toggleGroup="$selection" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="198.0" AnchorPane.topAnchor="75.0" />
+      <RadioButton fx:id="customRadioButton" layoutX="36.0" layoutY="100.0" mnemonicParsing="false" text="Custom" toggleGroup="$selection" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="198.0" AnchorPane.topAnchor="99.0" />
+   </children>
+</AnchorPane>

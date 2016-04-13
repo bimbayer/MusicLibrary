@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.BlockOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.2357473035439137" layoutX="127.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="blockTable" layoutX="-13.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <columns>
+                      <TableColumn fx:id="blockNameColumn" prefWidth="265.0" resizable="false" text="Block" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="356.0" styleClass="background">
+               <children>
+                  <Label layoutX="43.0" layoutY="33.0" prefHeight="36.0" prefWidth="226.0" styleClass="label-header" text="Details" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="147.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+                  <GridPane layoutX="11.0" layoutY="69.0" prefHeight="180.0" prefWidth="396.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.61602783203125" minWidth="10.0" prefWidth="89.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="881.0" minWidth="10.0" prefWidth="879.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="song1Label" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="1." GridPane.rowIndex="1" />
+                        <Label text="2." GridPane.rowIndex="2" />
+                        <Label fx:id="song2Label" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="3." GridPane.rowIndex="3" />
+                        <Label fx:id="song3Label" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Blockname" />
+                        <Label fx:id="blockNameLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label text="5." GridPane.rowIndex="5" />
+                        <Label fx:id="song5Label" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="6." GridPane.rowIndex="6" />
+                        <Label fx:id="song6Label" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="4." GridPane.rowIndex="4" />
+                        <Label fx:id="song4Label" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <HBox layoutX="239.0" layoutY="258.0" spacing="7.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <children>
+                        <Button layoutX="136.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleNewPerson" text="New" />
+                        <Button layoutX="208.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleEditPerson" text="Edit" />
+                        <Button layoutX="278.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleDeletePerson" text="Delete" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
