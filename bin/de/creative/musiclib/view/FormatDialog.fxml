@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="160.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.FormatDialogController">
+<AnchorPane prefHeight="160.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.creative.musiclib.view.FormatDialogController">
    <children>
       <Label layoutX="95.0" layoutY="14.0" prefHeight="26.0" prefWidth="261.0" text="Wählen sie das Format für die Gig-Liste" AnchorPane.topAnchor="14.0" />
       <HBox layoutX="303.0" layoutY="117.0" spacing="15.0">
