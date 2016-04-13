@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="466.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.creative.musiclib.view.BlockEditDialogController">
+   <children>
+      <GridPane layoutX="30.0" layoutY="36.0" prefHeight="390.0" prefWidth="639.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.0" minWidth="0.0" prefWidth="121.83086776733398" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="622.0" minWidth="10.0" prefWidth="395.169132232666" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="blockNameField" GridPane.columnIndex="1" />
+            <Label text="Blockname" />
+            <Label text="Lied 1" GridPane.rowIndex="1" />
+            <Label text="Lied 2" GridPane.rowIndex="2" />
+            <Label text="Lied 3" GridPane.rowIndex="3" />
+            <Label text="Lied 5" GridPane.rowIndex="5" />
+            <Label text="Lied 6" GridPane.rowIndex="6" />
+            <ComboBox fx:id="song5Combo" prefHeight="26.0" prefWidth="375.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="song3Combo" prefHeight="26.0" prefWidth="385.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Lied 4" GridPane.rowIndex="4" />
+            <ComboBox fx:id="song1Combo" prefHeight="26.0" prefWidth="393.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="song2Combo" prefHeight="26.0" prefWidth="391.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="song4Combo" prefHeight="26.0" prefWidth="378.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="song6Combo" prefHeight="26.0" prefWidth="405.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <HBox layoutX="308.0" layoutY="251.0" spacing="7.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <Button defaultButton="true" layoutX="274.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleOk" text="Bestätigen" />
+            <Button layoutX="360.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleCancel" text="Abbrechen" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

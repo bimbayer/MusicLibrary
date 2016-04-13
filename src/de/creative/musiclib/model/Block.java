@@ -31,7 +31,7 @@ public class Block {
 		return blockName.get();
 	}
 
-	public void setSongName(String pblockName) {
+	public void setBlockName(String pblockName) {
 		this.blockName.set(pblockName);
 	}
 

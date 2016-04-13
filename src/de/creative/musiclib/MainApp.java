@@ -11,6 +11,7 @@ import javax.xml.bind.Unmarshaller;
 import de.creative.musiclib.model.Block;
 import de.creative.musiclib.model.Song;
 import de.creative.musiclib.model.SongListWrapper;
+import de.creative.musiclib.view.BlockEditDialogController;
 import de.creative.musiclib.view.BlockOverviewController;
 import de.creative.musiclib.view.FormatCustomDialogController;
 import de.creative.musiclib.view.FormatDialogController;
@@ -42,6 +43,7 @@ public class MainApp extends Application {
 	 */
 	private ObservableList<Song> songData = FXCollections.observableArrayList();
 	private ObservableList<Block> blockData = FXCollections.observableArrayList();
+
 	/**
 	 * Constructor
 	 */
@@ -69,7 +71,7 @@ public class MainApp extends Application {
 	public ObservableList<Song> getSongData() {
 		return songData;
 	}
-	
+
 	/**
 	 * Returns the data as an observable list of Persons.
 	 * 
@@ -113,10 +115,10 @@ public class MainApp extends Application {
 
 			songData.clear();
 			songData.addAll(wrapper.getSongs());
-			
+
 			blockData.clear();
 			blockData.addAll(wrapper.getBlocks());
-			
+
 			// Save the file path to the registry.
 			setSongFilePath(file);
 
@@ -297,7 +299,7 @@ public class MainApp extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * Shows the person overview inside the root layout.
 	 */
@@ -346,7 +348,7 @@ public class MainApp extends Application {
 			// Set the person into the controller.
 			SongEditDialogController controller = loader.getController();
 			controller.setDialogStage(dialogStage);
-			controller.setPerson(person);
+			controller.setSong(person);
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.setResizable(false);
@@ -358,7 +360,7 @@ public class MainApp extends Application {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Opens a dialog to edit details for the specified person. If the user
 	 * clicks OK, the changes are saved into the provided person object and true
@@ -372,21 +374,21 @@ public class MainApp extends Application {
 		try {
 			// Load the fxml file and create a new stage for the popup dialog.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("view/SongEditDialog.fxml"));
+			loader.setLocation(MainApp.class.getResource("view/BlockEditDialog.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
 
 			// Create the dialog Stage.
 			Stage dialogStage = new Stage();
-			dialogStage.setTitle("Edit Person");
+			dialogStage.setTitle("Edit Block");
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.initOwner(primaryStage);
 			Scene scene = new Scene(page);
 			dialogStage.setScene(scene);
 
 			// Set the person into the controller.
-			SongEditDialogController controller = loader.getController();
-			controller.setDialogStage(dialogStage);
-//			controller.setPerson(pBlock);
+			BlockEditDialogController controller = loader.getController();
+			controller.setDialogStage(dialogStage, songData);
+			controller.setBlock(pBlock);
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.setResizable(false);
@@ -449,7 +451,7 @@ public class MainApp extends Application {
 			return controller.selectInputs();
 		} catch (IOException e) {
 			e.printStackTrace();
-			return new int[]{4,0};
+			return new int[] { 4, 0 };
 		}
 	}
 

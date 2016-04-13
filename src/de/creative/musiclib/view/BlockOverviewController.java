@@ -2,7 +2,6 @@ package de.creative.musiclib.view;
 
 import de.creative.musiclib.MainApp;
 import de.creative.musiclib.model.Block;
-import de.creative.musiclib.model.Song;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;

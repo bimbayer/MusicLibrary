@@ -62,11 +62,11 @@ public class SongEditDialogController {
 	}
 
 	/**
-	 * Sets the person to be edited in the dialog.
+	 * Sets the Song to be edited in the dialog.
 	 * 
 	 * @param pSong
 	 */
-	public void setPerson(Song pSong) {
+	public void setSong(Song pSong) {
 		this.song = pSong;
 
 		songNameField.setText(pSong.getSongName());
