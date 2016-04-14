@@ -14,7 +14,7 @@ import de.creative.musiclib.model.SongListWrapper;
 import de.creative.musiclib.view.BlockEditDialogController;
 import de.creative.musiclib.view.BlockOverviewController;
 import de.creative.musiclib.view.FormatCustomDialogController;
-import de.creative.musiclib.view.FormatDialogController;
+import de.creative.musiclib.view.AddSongToBlockDialogController;
 import de.creative.musiclib.view.GigListOverviewController;
 import de.creative.musiclib.view.RootLayoutController;
 import de.creative.musiclib.view.SingerStatisticsController;
@@ -48,19 +48,7 @@ public class MainApp extends Application {
 	 * Constructor
 	 */
 	public MainApp() {
-		// Add some sample data
-		// songData.add(new Song("Narcotic", "Liquido", "Lars", "None",
-		// "C-D-F-C", 2001, "None", "C-D-F-G-A", "C-D-F-C",
-		// "C-Dur"));
-		// personData.add(new Song("Hans", "Muster"));
-		// personData.add(new Song("Ruth", "Mueller"));
-		// personData.add(new Song("Heinz", "Kurz"));
-		// personData.add(new Song("Cornelia", "Meier"));
-		// personData.add(new Song("Werner", "Meyer"));
-		// personData.add(new Song("Lydia", "Kunz"));
-		// personData.add(new Song("Anna", "Best"));
-		// personData.add(new Song("Stefan", "Meier"));
-		// personData.add(new Song("Martin", "Mueller"));
+
 	}
 
 	/**
@@ -105,7 +93,6 @@ public class MainApp extends Application {
 	 * @param file
 	 */
 	public void loadSongDataFromFile(File file) {
-		System.out.println("LOADPERSONDATA");
 		try {
 			JAXBContext context = JAXBContext.newInstance(SongListWrapper.class);
 			Unmarshaller um = context.createUnmarshaller();
@@ -203,7 +190,6 @@ public class MainApp extends Application {
 			// Give the controller access to the main app.
 			RootLayoutController controller = loader.getController();
 			controller.setMainApp(this);
-			System.out.println("INITROOTLAYOUT");
 
 			primaryStage.show();
 		} catch (IOException e) {
@@ -280,7 +266,7 @@ public class MainApp extends Application {
 	}
 
 	/**
-	 * Shows the person overview inside the root layout.
+	 * Shows the Song overview inside the root layout.
 	 */
 	public void showSongOverview() {
 		try {
@@ -301,7 +287,7 @@ public class MainApp extends Application {
 	}
 
 	/**
-	 * Shows the person overview inside the root layout.
+	 * Shows the Block overview inside the root layout.
 	 */
 	public void showBlockOverview() {
 		try {
@@ -430,11 +416,11 @@ public class MainApp extends Application {
 		}
 	}
 
-	public int[] showGigListCustomDialog() {
+	public boolean showRemoveSongFromBlockDialog(Block pBlock) {
 		try {
 			// Load the fxml file and create a new stage for the popup.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("view/FormatCustomDialog.fxml"));
+			loader.setLocation(MainApp.class.getResource("view/RemoveSongFromBlockDialog.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("Giglist Editor");
@@ -448,18 +434,18 @@ public class MainApp extends Application {
 			dialogStage.setResizable(false);
 			dialogStage.showAndWait();
 
-			return controller.selectInputs();
+			return true;
 		} catch (IOException e) {
 			e.printStackTrace();
-			return new int[] { 4, 0 };
+			return false;
 		}
 	}
 
-	public int showGigListDialog() {
+	public boolean showAddSongToBlockDialog(Block pBlock) {
 		try {
 			// Load the fxml file and create a new stage for the popup.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("view/FormatDialog.fxml"));
+			loader.setLocation(MainApp.class.getResource("view/AddSongToBlockDialog.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("Format");
@@ -469,35 +455,35 @@ public class MainApp extends Application {
 			dialogStage.setScene(scene);
 
 			// Set the persons into the controller.
-			FormatDialogController controller = loader.getController();
+			AddSongToBlockDialogController controller = loader.getController();
+			controller.setBlock(pBlock);
+			controller.setSongData(songData);
+			controller.setDialogStage(dialogStage);
 			dialogStage.setResizable(false);
 			dialogStage.showAndWait();
 
-			return controller.getSelectedChoice();
+			return controller.isOkClicked();
 		} catch (IOException e) {
 			e.printStackTrace();
-			return 0;
+			return false;
 		}
 	}
 
-	public void showGigListEdit() {
+	/**
+	 * Shows the Giglist overview inside the root layout.
+	 */
+	public void showGiglistOverview() {
 		try {
-			// Load the fxml file and create a new stage for the popup.
+			// Load person overview.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("view/GigListEdit.fxml"));
-			AnchorPane page = (AnchorPane) loader.load();
-			Stage dialogStage = new Stage();
-			dialogStage.setTitle("Giglist Editor");
-			dialogStage.initModality(Modality.WINDOW_MODAL);
-			dialogStage.initOwner(primaryStage);
-			Scene scene = new Scene(page);
-			dialogStage.setScene(scene);
+			loader.setLocation(MainApp.class.getResource("view/GigListOverview.fxml"));
+			AnchorPane giglistOverview = (AnchorPane) loader.load();
 
-			// Set the persons into the controller.
+			// Set person overview into the center of root layout.
+			rootLayout.setCenter(giglistOverview);
+			// Give the controller access to the main app.
 			GigListOverviewController controller = loader.getController();
 			controller.setMainApp(this);
-			dialogStage.setResizable(false);
-			dialogStage.show();
 
 		} catch (IOException e) {
 			e.printStackTrace();

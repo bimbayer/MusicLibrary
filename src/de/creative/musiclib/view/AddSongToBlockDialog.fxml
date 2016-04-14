@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="206.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.creative.musiclib.view.AddSongToBlockDialogController">
+   <children>
+      <Label layoutX="70.0" layoutY="14.0" prefHeight="26.0" prefWidth="310.0" text="Einen Song zum Block hinzufügen" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <HBox layoutX="303.0" layoutY="166.0" spacing="15.0">
+         <children>
+            <Button layoutX="258.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleOk" text="Ok" />
+            <Button layoutX="334.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleCancel" text="Abbrechen" />
+         </children>
+      </HBox>
+      <ComboBox fx:id="songombo" layoutX="100.0" layoutY="117.0" prefWidth="150.0" />
+      <ComboBox fx:id="positionCombo" layoutX="100.0" layoutY="73.0" prefHeight="26.0" prefWidth="75.0" />
+      <Label layoutX="34.0" layoutY="120.0" text="Song:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="76.0" text="Position:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="164.0" text="Übergang:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="songtransitionField" layoutX="100.0" layoutY="161.0" prefHeight="26.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

@@ -15,6 +15,18 @@ public class BlockEditDialogController {
 	@FXML
 	private TextField blockNameField;
 	@FXML
+	private TextField song1transitionField;
+	@FXML
+	private TextField song2transitionField;
+	@FXML
+	private TextField song3transitionField;
+	@FXML
+	private TextField song4transitionField;
+	@FXML
+	private TextField song5transitionField;
+	@FXML
+	private TextField song6transitionField;
+	@FXML
 	private ComboBox<String> song1Combo;
 	@FXML
 	private ComboBox<String> song2Combo;
@@ -82,6 +94,14 @@ public class BlockEditDialogController {
 		song4Combo.getSelectionModel().select(pBlock.getSong4());
 		song5Combo.getSelectionModel().select(pBlock.getSong5());
 		song6Combo.getSelectionModel().select(pBlock.getSong6());
+		
+		song1transitionField.setText(pBlock.getSong1transition());
+		song2transitionField.setText(pBlock.getSong2transition());
+		song3transitionField.setText(pBlock.getSong3transition());
+		song4transitionField.setText(pBlock.getSong4transition());
+		song5transitionField.setText(pBlock.getSong5transition());
+		song6transitionField.setText(pBlock.getSong6transition());
+		
 	}
 
 	/**
@@ -106,6 +126,13 @@ public class BlockEditDialogController {
 			block.setSong4(song4Combo.getSelectionModel().getSelectedItem());
 			block.setSong5(song5Combo.getSelectionModel().getSelectedItem());
 			block.setSong6(song6Combo.getSelectionModel().getSelectedItem());
+			
+			block.setSong1transition(song1transitionField.getText());
+			block.setSong2transition(song2transitionField.getText());
+			block.setSong3transition(song3transitionField.getText());
+			block.setSong4transition(song4transitionField.getText());
+			block.setSong5transition(song5transitionField.getText());
+			block.setSong6transition(song6transitionField.getText());
 
 			okClicked = true;
 			dialogStage.close();

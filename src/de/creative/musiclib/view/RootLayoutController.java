@@ -58,7 +58,7 @@ public class RootLayoutController {
 	 */
 	@FXML
 	private void handleShowGigList() {
-		mainApp.showGigListEdit();
+		mainApp.showGiglistOverview();
 	}
 
 	/**

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -30,23 +31,56 @@
             <TextField fx:id="authorField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="yearField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="introField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Label text="Songname" />
-            <Label text="Band" GridPane.rowIndex="1" />
-            <Label text="Veröffentlichung" GridPane.rowIndex="2" />
-            <Label text="Tonart" GridPane.rowIndex="3" />
-            <Label text="Sänger" GridPane.rowIndex="5" />
-            <Label text="Intro" GridPane.rowIndex="6" />
-            <Label text="Vers" GridPane.rowIndex="7" />
-            <Label text="Pre-Chorus" GridPane.rowIndex="8" />
-            <Label text="Chorus" GridPane.rowIndex="9" />
-            <Label text="Bridge" GridPane.rowIndex="10" />
+            <Label text="Songname">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label text="Band" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label text="Veröffentlichung" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label text="Tonart" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label text="Sänger" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label text="Intro" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label text="Vers" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label text="Pre-Chorus" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label text="Chorus" GridPane.rowIndex="9">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label text="Bridge" GridPane.rowIndex="10">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
             <TextField fx:id="verseField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <TextField fx:id="preChorusField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <TextField fx:id="chorusField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <TextField fx:id="bridgeField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
             <ComboBox fx:id="singerCombo" prefHeight="26.0" prefWidth="375.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <ComboBox fx:id="tonartCombo" prefHeight="26.0" prefWidth="385.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label text="Kapo" GridPane.rowIndex="4" />
+            <Label text="Kapo" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
             <TextField fx:id="kapoField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
