@@ -18,10 +18,10 @@
               <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Close" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Gig-Listen">
+            <Menu mnemonicParsing="false" text="Ansicht">
               <items>
-                <MenuItem mnemonicParsing="false" onAction="#handleShowGigList" text="Erstellen" />
-                  <MenuItem mnemonicParsing="false" onAction="#handleShowBlockOverView" text="Block-Editor öffnen" />
+                <MenuItem mnemonicParsing="false" onAction="#handleShowGigList" text="Gig-List Editor" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowBlockOverView" text="Block-Editor" />
                   <MenuItem mnemonicParsing="false" onAction="#handleShowSongOverView" text="Song-Übersicht" />
               </items>
             </Menu>

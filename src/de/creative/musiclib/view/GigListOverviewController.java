@@ -8,7 +8,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Alert.AlertType;
 
-public class GigListEditController {
+public class GigListOverviewController {
 	@FXML
 	private TableView<Song> songTable;
 	@FXML

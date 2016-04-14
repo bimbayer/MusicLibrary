@@ -15,7 +15,7 @@ import de.creative.musiclib.view.BlockEditDialogController;
 import de.creative.musiclib.view.BlockOverviewController;
 import de.creative.musiclib.view.FormatCustomDialogController;
 import de.creative.musiclib.view.FormatDialogController;
-import de.creative.musiclib.view.GigListEditController;
+import de.creative.musiclib.view.GigListOverviewController;
 import de.creative.musiclib.view.RootLayoutController;
 import de.creative.musiclib.view.SingerStatisticsController;
 import de.creative.musiclib.view.SongAnalysisController;
@@ -494,7 +494,7 @@ public class MainApp extends Application {
 			dialogStage.setScene(scene);
 
 			// Set the persons into the controller.
-			GigListEditController controller = loader.getController();
+			GigListOverviewController controller = loader.getController();
 			controller.setMainApp(this);
 			dialogStage.setResizable(false);
 			dialogStage.show();
