@@ -13,7 +13,7 @@ import de.creative.musiclib.model.Song;
 import de.creative.musiclib.model.SongListWrapper;
 import de.creative.musiclib.view.BlockEditDialogController;
 import de.creative.musiclib.view.BlockOverviewController;
-import de.creative.musiclib.view.FormatCustomDialogController;
+import de.creative.musiclib.view.RemoveSongFromBlockDialogController;
 import de.creative.musiclib.view.AddSongToBlockDialogController;
 import de.creative.musiclib.view.GigListOverviewController;
 import de.creative.musiclib.view.RootLayoutController;
@@ -430,7 +430,9 @@ public class MainApp extends Application {
 			dialogStage.setScene(scene);
 
 			// Set the persons into the controller.
-			FormatCustomDialogController controller = loader.getController();
+			RemoveSongFromBlockDialogController controller = loader.getController();
+			controller.setBlock(pBlock);
+			controller.setDialogStage(dialogStage);
 			dialogStage.setResizable(false);
 			dialogStage.showAndWait();
 

@@ -179,7 +179,7 @@
                   <HBox layoutX="41.0" layoutY="764.0" spacing="40.0" AnchorPane.bottomAnchor="15.0">
                      <children>
                         <Button layoutX="41.0" layoutY="764.0" mnemonicParsing="false" onAction="#handleAddSongFromBlock" text="Add Song to Block" />
-                        <Button layoutX="231.0" layoutY="765.0" mnemonicParsing="false" text="Remove Song from Block" />
+                        <Button layoutX="231.0" layoutY="765.0" mnemonicParsing="false" onAction="#handleRemoveSongFromBlock" text="Remove Song from Block" />
                      </children>
                   </HBox>
                </children>
